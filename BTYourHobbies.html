@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input[type=text][type=email]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <title>Sở Thích Của Bạn</title>
+</head>
+<body style="background-color: paleturquoise;">
+    <h1 style="text-align: center;background-color: peachpuff;">Sở Thích Của Bạn</h1>
+    <form action="login.php" method="POST">
+    <fieldset style="background-color: white;">
+    Họ và Tên: <input type="text" name="name"/>
+    <br>
+    Email: <input type="email" name="email">
+    <br>
+    Sở Thích: 
+    <input type="checkbox" name="box[]" value="b1"> Thể Thao
+    <input type="checkbox" name="box[]" value="b2"> Âm Nhạc
+    <input type="checkbox" name="box[]" value="b3"> Đọc Sách
+    <input type="checkbox" name="box[]" value="b4"> Lướt Web
+    <input type="checkbox" name="box[]" value="b1"> Chơi Game
+    <input type="checkbox" name="box[]" value="b1"> Điện Ảnh
+    <input type="checkbox" name="box[]" value="b1"> Du Lịch
+<br>
+        <input type="submit"> Gửi Thông Tin
+        <input type="reset"> Nhập Lại
+    </fieldset>
+    </form>
+</body>
+</html>
