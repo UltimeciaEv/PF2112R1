@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="calculateForm" action="calculate.php" method="POST">
+        <input type="number" name="firstNumber" id="firstNumber" placeholder="Nhap so thu nhat">
+        <input type="number" name="secondNumber" id="secondNumber" placeholder="Nhap so thu hai">
+    </form>
+    <button onclick="plus()">Addition (+)</button>
+    <button onclick="subtract()">Subtraction (-)</button>
+    <button onclick="multiply()">Multiplication (*)</button>
+    <button onclick="divide()">Division (/)</button>
+    <br>
+    <h4 id="message"></h4>
+    <script>
+        let firstNumber, secondNumber;
+        let message = document.getElementById('message');
+        function plus() {
+            firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            message.innerHTML = "Result Plus = " + (firstNumber + secondNumber);
+        }
+        function subtract() {
+            firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            message.innerHTML = "Result Subtract = " + (firstNumber - secondNumber);
+        }
+        function multiply() {
+            firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            message.innerHTML = "Result Multiplication = " + (firstNumber * secondNumber);
+        }
+        function divide() {
+            firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            message.innerHTML = "Result Division = " + (firstNumber / secondNumber);
+        }
+    </script>
+</body>
+</html>

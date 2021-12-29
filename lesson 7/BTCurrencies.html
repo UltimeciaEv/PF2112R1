@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange</title>
+</head>
+<body>
+    <input type="text" id="Output">
+    <select name id = "Select1">
+        <option value="a">VNĐ</option>
+        <option value="b">USD</option>
+    </select>
+    <select name id = "Select2">
+        <option value="a">VNĐ</option>
+        <option value="b">USD</option>
+    </select>
+    <button onclick="Convert()">Convert</button>
+    <script>
+        function Convert(){
+            let Valueincome = document.getElementById('Output').value;
+            let Select1 = document.getElementById('Select1').value;
+            let Select2 = document.getElementById('Select2').value;
+            if (Select1 == Select2){
+                alert(Valueincome)
+            }
+            if (Select1 == "a" && Select2 =="b"){
+                alert(Valueincome/22000);
+            }
+        }
+    </script>
+</body>
+</html>

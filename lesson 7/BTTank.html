@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanking The Game</title>
+</head>
+<body>
+    <div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;">
+        <img id="tank" src="tank.png" style="position: relative; top: 0px; left: 0px;" width="19" height="19">
+    </div>
+    <button id="upBtn">UP</button>
+    <button id="downBtn">Down</button>
+    <button id="leftBtn">Left</button>
+    <button id="rightBtn">Right</button>
+    <script>
+        let tank = document.getElementById('tank');
+        let upBtn = document.getElementById('upBtn');
+        let downBtn = document.getElementById('downBtn');
+        let leftBtn = document.getElementById('leftBtn');
+        let rightBtn = document.getElementById('rightBtn');
+        var x = y = 0;
+        rightBtn.addEventListener('click', function () {
+            if (x < 171) {
+                x += 19;
+                tank.style.left = x + 'px';
+            }
+        });
+        leftBtn.addEventListener('click', function () {
+            if (x > 0) {
+                x -= 19;
+                tank.style.left = x + 'px';
+            }
+        });
+        upBtn.addEventListener('click', function () {
+            if (y > 0) {
+                y -= 19;
+                tank.style.top = y + 'px';
+            }
+        });
+        downBtn.addEventListener('click', function () {
+            if (y <171) {
+                y += 19;
+                tank.style.top = y + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
