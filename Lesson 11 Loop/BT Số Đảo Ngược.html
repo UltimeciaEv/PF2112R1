@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        let n = parseInt(prompt('Nhập một số nguyên bất kì: '));
+        let result;
+        document.write('Số đảo ngược là: ')
+
+        while (n > 0){
+            result = n % 10;
+            n = Math.floor(n/10);
+            document.write(result);
+        }
+    </script>
 </body>
 </html>
