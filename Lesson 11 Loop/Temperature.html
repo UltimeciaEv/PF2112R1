@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<body>
+    <button onclick="temperatureChange()">Nhấn để thay đổi NĐ</button>
+    <script>
+        function temperatureChange(){
+            let c = prompt("Hãy nhập nhiệt độ nước: ");
+            let testC = parseInt(c);
+            while (c == null || testC != c || c <= 0 || testC > 100 || testC < 20){
+                while (c == null || testC !=c || c<= 0){
+                    c = prompt("Hãy nhập vào nhiệt độ nước (số nguyên dương): ");
+                    testC = parseInt(c);
+                }
+                while (testC > 100 || testC < 20){
+                    if(testC > 100){
+                        alert("Hơi nóng, bạn hãy giảm nhiệt độ");
+                        c = parseInt(prompt("Hãy nhập vào nhiệt độ nước: "));
+                        testC = parseInt(C);
+                    }
+                    if(testC < 20){
+                        alert("Hãy tăng nhiệt độ");
+                        c = parseInt(prompt("Hãy nhập vào nhiệt độ nước: "));
+                        testC = parseInt(C);
+                    }
+                }            x
+            }
+        }
+        alert("Ok");
+    </script>
+</body>
+</html>

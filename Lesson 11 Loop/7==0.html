@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+<<<<<<< Updated upstream
         let n=30;
         let count = 1;
         let total = 0;
@@ -22,6 +23,21 @@
             number ++;
         }
         document.write('<br>'+'tổng là' + total);
+=======
+        let count = total = 0;
+        n = 1;
+        while (count <30) {
+            if (canbedividedby7(n)){
+                total += n;
+                count++;
+            }
+            n++;
+        }
+        document.write(total);
+            function canbedividedby7(number){
+                return number % 7 == 0;
+            }
+>>>>>>> Stashed changes
     </script>
 </body>
 </html>

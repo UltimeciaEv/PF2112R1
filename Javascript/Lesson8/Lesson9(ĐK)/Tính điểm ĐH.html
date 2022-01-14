@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm ĐH</title>
+</head>
+<body>
+    <h2> Tính điểm thi đại học khối D</h2>
+    <form action="#" method="POST">
+        <table>
+            <tr>
+                <td> Môn Toán</td>
+                <td><input type ="number" name="math" id="math" placeholder="Nhập điểm môn toán"></td>
+            </tr>
+            <tr>
+                <td> Môn Văn</td>
+                <td><input type ="number" name="literature" id="literature" placeholder="Nhập điểm môn văn"></td>
+            </tr>
+            <tr>
+                <td> Môn Anh</td>
+                <td><input type ="number" name="english" id="english" placeholder="Nhập điểm môn Anh"></td>
+            </tr>
+            <tr>
+                <td> Khu Vực</td>
+                <td>
+                    <select id="area">
+                        <option value="kv1">KV1</option>
+                        <option value="kv2">KV2</option>
+                        <option value="kv2-nt">KV2-NT</option>
+                        <option value="kv3">KV3</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <button id="calBtn">Tính điểm</button>
+    <p id="result"></p>
+    <script>
+        let calBtn = document.getElementById('calBtn');
+        let math = document.getElementById('math');
+        let literature = document.getElementById('literature');
+        let english = document.getElementById('english');
+        let areaSelect = document.getElementById('area');
+        let bonus;
+        calBtn.addEventListener('click', function(){
+            switch (areaSelect.value){
+                case 'kv1': bonus = 0.75; break;
+                case 'kv2': bonus = 0.5; break;
+                case 'kv2-nt': bonus = 0.25; break;
+                case 'kv3': bonus = 0; break;
+                default: bonus = 0; break;
+            }
+            let total = parseFloat(math.value) + parseFloat(literature.value) + parseFloat(english.value) + bonus;
+            if(isNaN(total)){
+                document.getElementById('result').innerText = "Không xác định";
+            }
+            document.getElementById('result').innerText = "Tổng điểm ĐH Khối D của bạn là: " +total;
+        });
+    </script>
+</body>
+</html>
