@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán số</title>
+</head>
+<body>
+    <button id="startBtn">Play</button>
+    <script>
+        let startBtn = document.getElementById('startBtn');
+        let randomNumber, guessNumber;
+        startBtn.addEventListener('click', function () {
+            // người dùng nhập vào muốn đoán trong khoảng nào (nhập vào số lớn nhất)
+            let maxNumber = parseInt(prompt("Enter max value: "));
+            // Chọn ra số ngẫu nhiên trong khoảng mà người dùng chọn
+            randomNumber = parseInt(Math.random() * maxNumber);
+            console.log(randomNumber);
+            // Hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán
+            guessNumber = parseInt(prompt("Please enter an integer to guess"));
+            let count = 0;
+            while (count < 3) {
+                if (guessNumber > randomNumber) alert('Bigger than random!');
+                if (guessNumber < randomNumber) alert('Smaller than random!');
+                if (guessNumber == randomNumber) {
+                    alert('Congrats! Correct!');
+                    break;
+                }
+                guessNumber = parseInt(prompt("Please enter an integer to guess"));
+                count++;
+            }
+            if (count >= 3 && guessNumber != randomNumber) {
+                alert('Limited guess');
+            }
+        });
+    </script>
+</body>
+</html>
