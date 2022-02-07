@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Basic Caro Game</title>
+</head>
+<body>
+    <h1>Caro Game Simple</h1>
+    <br><br>
+    <hr>
+    <p id="caro_game"></p>
+    <input type="button" value="Change Value" onclick="changeValue()">
+    <script>
+        let caroAre = document.getElementById('caro_game');
+
+        let board = [];
+
+        let data = "";
+        for (let i = 0; i < 5; i++) {
+            data += "<br>";
+            board[i] = [0, 0, 0, 0, 0]; 
+            for (let j = 0; j < 5; j++) {
+                board[i][j] = 0;
+                data += board[i][j] + "&nbsp;&nbsp;";
+            }
+        };
+        caroAre.innerHTML = data;
+
+        function changeValue() {
+            let positionX = prompt("X: ");
+            let positionY = prompt("Y: ");
+            data = "";
+            board[positionX][positionY] = "x";
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    data += board[i][j] + " ";
+                }
+            }
+            caroAre.innerHTML = "<hr/>" + data;
+        };
+    </script>
+</body>
+</html>
