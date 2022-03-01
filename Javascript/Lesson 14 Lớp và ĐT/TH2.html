@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class date{
+            day;
+            month;
+            year;
+            constructor(d,m,y){
+                this.day = d;
+                this.month = m;
+                this.year = y;
+            }
+        getDay(){
+            return this.day;
+        }
+        getMonth(){
+            return this.month;
+        }
+        getYear(){
+            return this.year;
+        }
+        setDay(set_d){
+            this.day = set_d;
+        }
+     }
+     let date1 = new date(12,3,1990);
+     let date2 = new date(01,01,2022);
+     console.log(date1.getDay());
+     date1.setday(5);
+    </script>
+</body>
+</html>
